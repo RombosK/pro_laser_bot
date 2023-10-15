@@ -114,7 +114,7 @@ async def buttons_press_info(callback: CallbackQuery):
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.edit_media(
-            media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_TEST['/2t']),
+            media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/2t']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
@@ -129,7 +129,7 @@ async def buttons_press_info(callback: CallbackQuery):
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.edit_media(
-            media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_TEST['/3t']),
+            media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/3t']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
