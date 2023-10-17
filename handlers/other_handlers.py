@@ -189,7 +189,7 @@ async def buttons_press_info(callback: CallbackQuery):
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.edit_media(
-            media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_INFO['/4u']),
+            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/4u']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
