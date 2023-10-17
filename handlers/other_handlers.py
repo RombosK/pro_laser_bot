@@ -98,8 +98,8 @@ async def buttons_press_support(callback: CallbackQuery):
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.answer_photo(
-            photo=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t'],
-            # media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
+            #photo=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t'],
+            media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
@@ -139,7 +139,7 @@ async def buttons_press_info(callback: CallbackQuery):
         )
 
 
-# Обработчик нажатия на кнопку Описание  # Упражнение 1
+# Обработчик нажатия на кнопку Описание 
 @router.callback_query(Text(text=['/1u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
@@ -154,12 +154,12 @@ async def buttons_press_info(callback: CallbackQuery):
         )
 
 
-# Обработчик нажатия на кнопку  Противопоказания # Упражнение 2
+# Обработчик нажатия на кнопку  Противопоказания 
 @router.callback_query(Text(text=['/2u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.edit_media(
-            media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_INFO['/2u']),
+            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/2u']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
@@ -169,12 +169,12 @@ async def buttons_press_info(callback: CallbackQuery):
         )
 
 
-# Обработчик нажатия на кнопку   Как подготовиться # Упражнение 3
+# Обработчик нажатия на кнопку   Как подготовиться 
 @router.callback_query(Text(text=['/3u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.edit_media(
-            media=InputMediaPhoto(media=file, caption=LEXICON_SRC_HI_RU_INFO['/3u']),
+            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/3u']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
@@ -184,7 +184,7 @@ async def buttons_press_info(callback: CallbackQuery):
         )
 
 
-# Обработчик нажатия на кнопку  Преимущество # Упражнение 4
+# Обработчик нажатия на кнопку  Преимущество 
 @router.callback_query(Text(text=['/4u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
