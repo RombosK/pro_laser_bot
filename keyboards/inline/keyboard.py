@@ -1,6 +1,6 @@
 from aiogram import Dispatcher
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton
+from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 
 from lexicon.lexicon import LEXICON_COMMANDS_RU
 
@@ -37,3 +37,4 @@ def create_inline_kb(width: int, *args: str, last_btn: str | None = None, last_b
 
     # Возврат объекта инлайн-клавиатуры
     return kb_builder.as_markup()
+

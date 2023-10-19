@@ -1,6 +1,5 @@
 from DATA_src.lexicon_src import *
 
-
 LEXICON_RU: dict[str, str] = LEXICON_SRC_RU
 
 LEXICON_SRC_HI_RU_INFO: dict[str, str] = LEXICON_SRC_HI_RU_INFO
@@ -16,3 +15,4 @@ LEXICON_HI_RU: dict[str, str] = LEXICON_SRC_HI_RU
 LEXICON_HI_RU_TEST: dict[str, str] = LEXICON_SRC_HI_RU_TEST
 
 LEXICON_HI_RU_UPR: dict[str, str] = LEXICON_SRC_HI_RU_INFO
+

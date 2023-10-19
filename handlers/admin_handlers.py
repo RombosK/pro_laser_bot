@@ -31,7 +31,8 @@
 #     print(message.from_user)
 #     for admin_id in config.tg_bot.admin_ids:
 #         print(admin_id)
-#         await bot.send_message(admin_id, str(f'{message.from_user.first_name}(@{message.from_user.username}) хочет связатьс с вами!'), reply_markup=keyboard)
+#         await bot.send_message(admin_id, str(f'{message.from_user.first_name}(@{message.from_user.username}) '
+#                                              f'хочет связатьс с вами!'), reply_markup=keyboard)
 #
 # # Этот хэндлер срабатывает на команду /help
 # @router.message(Command(commands='help'))
@@ -44,3 +45,4 @@
 #     print("Received /sos command")
 #     await bot.send_message(message.from_user.id, LEXICON_SOS_RU['/sos'], reply_markup=keyboard)
 #     # await message.answer(text=LEXICON_SOS_RU['/sos'], reply_markup=keyboard)
+#

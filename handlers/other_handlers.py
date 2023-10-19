@@ -99,7 +99,7 @@ async def buttons_press_info(callback: CallbackQuery):
     try:
         await callback.message.answer_photo(
             photo=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t'],
-            #media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
+            # media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
             reply_markup=callback.message.reply_markup
         )
     except Exception:
@@ -138,6 +138,20 @@ async def buttons_press_info(callback: CallbackQuery):
             reply_markup=callback.message.reply_markup
         )
 
+# Обработчик нажатия на кнопку Коллаген
+@router.callback_query(Text(text=['/4t']))
+async def buttons_press_info(callback: CallbackQuery):
+    try:
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_TEST['/4t'],
+            reply_markup=callback.message.reply_markup
+        )
+
+    except Exception:
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_TEST['/4t'],
+            reply_markup=callback.message.reply_markup
+        )
 
 # Обработчик нажатия на кнопку Описание 
 @router.callback_query(Text(text=['/1u']))
@@ -147,6 +161,7 @@ async def buttons_press_info(callback: CallbackQuery):
             media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/1u']),
             reply_markup=callback.message.reply_markup
         )
+
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_INFO['/1u'],
