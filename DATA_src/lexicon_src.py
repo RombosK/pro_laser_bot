@@ -19,7 +19,7 @@ LEXICON_SRC_COMMANDS_RU_TEST: dict[str, str] = {
     '/1t': '1️⃣ Описание',
     '/2t': '2️⃣ Стоимость курса',
     '/3t': '3️⃣ Противопоказания',
-    '/4t': '4️⃣ Для чего нужен коллаген'
+    '/4t': '4️⃣ Коллаген'
 }
 
 LEXICON_SRC_COMMANDS_RU_UPR: dict[str, str] = {
