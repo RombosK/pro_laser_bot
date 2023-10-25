@@ -13,8 +13,8 @@ keyboard = create_inline_kb(2, **LEXICON_COMMANDS_RU)
 keyboard_test = create_inline_kb(2, last_btn='Консультация 📞', last_btn1='Назад', **LEXICON_COMMANDS_RU_TEST)
 keyboard_upr = create_inline_kb(2, last_btn='Консультация 📞', last_btn1='Назад', **LEXICON_COMMANDS_RU_UPR)
 file = FSInputFile('start.jpg')
-file1 = FSInputFile('rf.jpg')
-file2 = FSInputFile('laser.jpg')
+# file1 = FSInputFile('rf.jpg')
+# file2 = FSInputFile('laser.jpg')
 global m
 
 
@@ -97,11 +97,15 @@ async def buttons_press_support(callback: CallbackQuery):
 @router.callback_query(Text(text=['/1t']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.answer_photo(
-            photo=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t'],
-            # media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_TEST['/1t'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.answer_photo(
+        #     photo=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t'],
+        #     # media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/1t']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_TEST['/1t'],
@@ -113,10 +117,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/2t']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/2t']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_TEST['/2t'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/2t']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_TEST['/2t'],
@@ -128,10 +136,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/3t']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/3t']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_TEST['/3t'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file1, caption=LEXICON_SRC_HI_RU_TEST['/3t']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_TEST['/3t'],
@@ -157,10 +169,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/1u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/1u']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_INFO['/1u'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/1u']),
+        #     reply_markup=callback.message.reply_markup
+        # )
 
     except Exception:
         await callback.message.edit_text(
@@ -173,10 +189,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/2u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/2u']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_INFO['/2u'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/2u']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_INFO['/2u'],
@@ -188,10 +208,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/3u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/3u']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_INFO['/3u'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/3u']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_INFO['/3u'],
@@ -203,10 +227,14 @@ async def buttons_press_info(callback: CallbackQuery):
 @router.callback_query(Text(text=['/4u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
-        await callback.message.edit_media(
-            media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/4u']),
+        await callback.message.answer(
+            text=LEXICON_SRC_HI_RU_INFO['/4u'],
             reply_markup=callback.message.reply_markup
         )
+        # await callback.message.edit_media(
+        #     media=InputMediaPhoto(media=file2, caption=LEXICON_SRC_HI_RU_INFO['/4u']),
+        #     reply_markup=callback.message.reply_markup
+        # )
     except Exception:
         await callback.message.edit_text(
             text=LEXICON_SRC_HI_RU_INFO['/4u'],
