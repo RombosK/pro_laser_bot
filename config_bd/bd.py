@@ -8,15 +8,14 @@ cur.execute("""CREATE TABLE IF NOT EXISTS users(
    userid INT PRIMARY KEY,
    username TEXT,
    name TEXT,
-   admin BOOL,
-   phone INT);
+   admin BOOL);
 """)
 conn.commit()
 
 
 def insert(user_id: int, user_name: str, name: str, admin: bool, phone=None):
-    cur.execute('INSERT INTO users (userid, username, name, admin, phone) VALUES (?, ?, ?, ?,?)',
-                (user_id, user_name, name, admin, phone))
+    cur.execute('INSERT INTO users (userid, username, name, admin) VALUES (?, ?, ?, ?)',
+                (user_id, user_name, name, admin))
     conn.commit()
 
 
