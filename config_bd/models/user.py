@@ -29,8 +29,8 @@ class User(BaseModel):
         nullable=True,
     )
 
-    # Phone number
-    number: Mapped[str] = mapped_column(BigInteger, nullable=True)
+    # # Phone number
+    # number: Mapped[str] = mapped_column(BigInteger, nullable=True)
 
     # Статус выбирается из возможных вариантов модели UserStatus
     status: Mapped[UserStatus] = mapped_column()
