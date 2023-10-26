@@ -20,7 +20,7 @@ async def send_echo(message: Message, bot: Bot):
                 user_id = member.id
                 name = member.first_name
                 if bd.select(user_id):
-                    await message.answer(text=f'С возвращением ')
+                    await message.answer(text=f'С возвращением {name} ')
                 else:
                     bd.insert(user_id, member.username, name, False)
                     await message.answer(

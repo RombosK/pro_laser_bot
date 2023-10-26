@@ -21,8 +21,9 @@ global m
 async def glob(bot: Bot):
     await bot.delete_message(message_id=m.message_id, chat_id=m.chat.id)
 
+    # Этот хэндлер срабатывает на команду /start
 
-# Этот хэндлер срабатывает на команду /start
+
 @router.message(CommandStart())
 async def process_start_command(message: Message):
     global m
@@ -48,9 +49,11 @@ async def buttons_press_info(callback: CallbackQuery, bot: Bot):
 
 # Обработчик нажатия на кнопку Лазерная эпиляция
 @router.callback_query(Text(text=['/1']))
-async def buttons_press_info(callback: CallbackQuery, bot: Bot):
+# async def buttons_press_info(callback: CallbackQuery, bot: Bot):
+async def buttons_press_info(message: Message, bot: Bot):
     try:
         await glob(bot)
+        await message.answer(text='<b>Информация о лазерной эпиляции диодным лазером Lumenis</b>👇🏽')
     except Exception:
         pass
     global m
@@ -150,6 +153,7 @@ async def buttons_press_info(callback: CallbackQuery):
             reply_markup=callback.message.reply_markup
         )
 
+
 # Обработчик нажатия на кнопку Коллаген
 @router.callback_query(Text(text=['/4t']))
 async def buttons_press_info(callback: CallbackQuery):
@@ -165,7 +169,8 @@ async def buttons_press_info(callback: CallbackQuery):
             reply_markup=callback.message.reply_markup
         )
 
-# Обработчик нажатия на кнопку Описание 
+
+# Обработчик нажатия на кнопку Описание
 @router.callback_query(Text(text=['/1u']))
 async def buttons_press_info(callback: CallbackQuery):
     try:
